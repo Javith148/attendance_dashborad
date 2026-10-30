@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, AlertCircle, ArrowRight } from 'lucide-react';
 import logoImg from '../assets/maas-logo.jpg';
 
-export default function AdminLoginPage({ onLoginSuccess }) {
+export default function AdminLoginPage({ onLoginSuccess, onNavigateToStaff }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
