@@ -7,3 +7,4 @@ Enterprise Staff Attendance & Payroll Management Dashboard built with React, Vit
 - **Admin Management Panel:** Real-time workforce metrics, staff management, leave approvals, and payroll calculation.
 - **Automated Salary Slips:** Instant PDF payslip generation and real Gmail SMTP dispatch.
 - **8-Hour Shift Policy:** Automatically determines Full Day (8h+) and Half Day (<8h) shifts.
+

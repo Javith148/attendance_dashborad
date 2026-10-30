@@ -170,6 +170,19 @@ export default function AdminLoginPage({ onLoginSuccess }) {
               <span>{isSubmitting ? 'Authenticating...' : 'Sign In to Admin Portal'}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
+
+            {/* Switch to Staff Portal */}
+            {onNavigateToStaff && (
+              <div className="pt-2 text-center">
+                <button
+                  type="button"
+                  onClick={onNavigateToStaff}
+                  className="text-xs font-semibold text-slate-500 hover:text-brand-navy transition-colors"
+                >
+                  Are you an employee? <span className="underline font-bold text-brand-navy">Staff Portal</span>
+                </button>
+              </div>
+            )}
           </form>
 
         </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, AlertCircle, ArrowRight } from 'lucide-react';
 import logoImg from '../assets/maas-logo.jpg';
 
-export default function StaffLoginPage({ onLoginSuccess }) {
+export default function StaffLoginPage({ onLoginSuccess, onNavigateToAdmin }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -169,6 +169,19 @@ export default function StaffLoginPage({ onLoginSuccess }) {
               <span>{isSubmitting ? 'Verifying Account...' : 'Sign In to Staff Portal'}</span>
               <ArrowRight className="w-4 h-4" />
             </button>
+
+            {/* Switch to Admin Portal */}
+            {onNavigateToAdmin && (
+              <div className="pt-2 text-center">
+                <button
+                  type="button"
+                  onClick={onNavigateToAdmin}
+                  className="text-xs font-semibold text-slate-500 hover:text-brand-navy transition-colors"
+                >
+                  Administrator Access? <span className="underline font-bold text-brand-navy">Admin Portal</span>
+                </button>
+              </div>
+            )}
           </form>
 
         </div>
